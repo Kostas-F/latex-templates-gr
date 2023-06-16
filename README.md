@@ -1,4 +1,8 @@
+These are only .tex files, not proper templates yet.
+
+
 # Simple LaTeX Templates
+
 Latex templates I use. Greek language is the primary and the main usefulness of the templates are for people new to LaTeX who want a dual language document and are having issues (with moderncv commands for example). The rest of the description will, for that reason be in Greek
 
 ## Template Ασκήσεων
