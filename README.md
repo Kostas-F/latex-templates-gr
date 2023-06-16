@@ -1,2 +1,2 @@
-# latex-templates-gr
-Latex templates I use. Greek lagnuage as primary.
+# Simple LaTeX Templates
+Latex templates I use. Greek lagnuage is primary. 
