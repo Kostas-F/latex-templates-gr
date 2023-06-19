@@ -4,6 +4,6 @@
 /cv/build/
 
 # Ignore testing files
-/hw/build/test.tex
+/hw/test.tex
 
-/cv/build/test.tex
+/cv/test.tex
