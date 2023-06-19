@@ -1,0 +1,42 @@
+\NeedsTeXFormat{LaTeX2e} % I used version [2022-02-02] but likely most reasonably modern versions will be fine
+\ProvidesPackage{simplehwgr}[2023/06/19 v1.0 packages for doing homework]
+% Comments will be in greek from here on.
+
+\RequirePackage[english,main=greek]{babel} % Γλώσσες 
+%% https://www.ctan.org/pkg/babel
+\babeltags{en = english} 
+\babeltags{gr = greek}
+% Για αλλαγή γλώσσας κάποιες επιλογές
+% \selectlanguage{languageA} 
+% \begin{otherlanguage}{languageB}
+%     Text in language B.https://www.ctan.org/pkg/amsmath
+% \end{otherlanguage} 
+% \textenglish{} --tags--> \texten{} textgr{}
+
+
+\RequirePackage{titling} % Ελεγχος της σελίδας τίτλου.
+%% https://www.ctan.org/pkg/titling
+% Τιτλος στο "κέντρο" (150pt απο πάνω)
+\renewcommand\maketitlehooka{\null\vspace*{150pt}}
+\renewcommand\maketitlehookd{\vfill\null}
+\RequirePackage{authblk} % Κάποια settings για πολλαπλούς authors και καλύτερα author block
+%% https://www.ctan.org/pkg/authblk
+
+%%%% Διάφορα σύμβολα και πακέτα μαθηματικών
+\RequirePackage{amsmath} % Βασικό πακέτο μαθηματικων
+%% https://www.ctan.org/pkg/amsmath
+\RequirePackage{amssymb} % Συμβολα 
+%% https://texdoc.org/serve/amssymb.pdf/0
+%% https://ctan.math.washington.edu/tex-archive/fonts/amsfonts/doc/amssymb.pdf
+\RequirePackage{amsthm} % Θεωρήματα,λημματα κλπ
+%% https://www.ctan.org/pkg/amsthm 
+\RequirePackage{physics} % Ευέλικτα brackets, συντομότερες εντολές για κοινές συναρτησεις κα.
+%% https://www.ctan.org/pkg/physics
+\RequirePackage{nicefrac} % Πλάγια κλάσματα (vintage)
+%% https://www.ctan.org/pkg/nicefrac
+\RequirePackage{xfrac} % Πλάγια κλάσματα περισσότερες επιλογές
+%% https://www.ctan.org/pkg/xfrac
+\RequirePackage{stackrel} % Επέκταση stackrel και κάτω απο relation. Προσθήκη stack σε binary σχεσεις
+%% https://www.ctan.org/pkg/stackrel
+\RequirePackage[makeroom]{cancel} % Σβησίματα σε math. Το makeroom αφήνει κενό για την τιμη που ισούται αυτό που σβήνεις
+%% https://www.ctan.org/pkg/cancel
