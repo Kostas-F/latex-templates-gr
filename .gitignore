@@ -1,3 +1,9 @@
 # Ignore build folders
 /hw/build/
+
 /cv/build/
+
+# Ignore testing files
+/hw/build/test.tex
+
+/cv/build/test.tex
