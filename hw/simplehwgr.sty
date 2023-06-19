@@ -1,0 +1,143 @@
+\NeedsTeXFormat{LaTeX2e} % I used version [2022-02-02] but likely most reasonably modern versions will be fine
+\ProvidesPackage{simplehwgr}[2023/06/19 v1.0 packages for doing homework]
+% Comments will be in greek from here on.
+
+% -------------------------------------------
+%%% Γλώσσες 
+% -------------------------------------------
+\RequirePackage[english,main=greek]{babel} 
+%% https://www.ctan.org/pkg/babel
+\babeltags{en = english} 
+\babeltags{gr = greek}
+% Για αλλαγή γλώσσας κάποιες επιλογές
+% \selectlanguage{languageA} 
+% \begin{otherlanguage}{languageB}
+%     Text in language B.https://www.ctan.org/pkg/amsmath
+% \end{otherlanguage} 
+% \textenglish{} --tags--> \texten{} textgr{}
+
+% -------------------------------------------
+%%% Τιτλος και πρωτη σελίδα
+% -------------------------------------------
+\RequirePackage{titling} % Ελεγχος της σελίδας τίτλου.
+%% https://www.ctan.org/pkg/titling
+% Τιτλος στο "κέντρο" (150pt απο πάνω)
+\renewcommand\maketitlehooka{\null\vspace*{150pt}}
+\renewcommand\maketitlehookd{\vfill\null}
+\RequirePackage{authblk} % Κάποια settings για πολλαπλούς authors και καλύτερα author block
+%% https://www.ctan.org/pkg/authblk
+
+% -------------------------------------------
+%%% Διάφορα σύμβολα και πακέτα μαθηματικών
+% -------------------------------------------
+\RequirePackage{amsmath} % Βασικό πακέτο μαθηματικων
+%% https://www.ctan.org/pkg/amsmath
+\RequirePackage{amssymb} % Συμβολα 
+%% https://texdoc.org/serve/amssymb.pdf/0
+%% https://ctan.math.washington.edu/tex-archive/fonts/amsfonts/doc/amssymb.pdf
+\RequirePackage{amsthm} % Θεωρήματα,λημματα κλπ
+%% https://www.ctan.org/pkg/amsthm 
+\RequirePackage{physics} % Ευέλικτα brackets, συντομότερες εντολές για κοινές συναρτησεις κα.
+%% https://www.ctan.org/pkg/physics
+\RequirePackage{nicefrac} % Πλάγια κλάσματα (vintage)
+%% https://www.ctan.org/pkg/nicefrac
+\RequirePackage{xfrac} % Πλάγια κλάσματα περισσότερες επιλογές
+%% https://www.ctan.org/pkg/xfrac
+\RequirePackage{stackrel} % Επέκταση stackrel και κάτω απο relation. Προσθήκη stack σε binary σχεσεις
+%% https://www.ctan.org/pkg/stackrel
+\RequirePackage[makeroom]{cancel} % Σβησίματα σε math. Το makeroom αφήνει κενό για την τιμη που ισούται αυτό που σβήνεις
+%% https://www.ctan.org/pkg/cancel
+
+% -------------------------------------------
+%%% Γραφήματα και χρώματά
+% -------------------------------------------
+\RequirePackage{graphicx} % Επέκταση του graphics, λίγο διαφορετικό συντακτικο
+%% https://www.ctan.org/pkg/graphicx
+\RequirePackage{xcolor} % Ευέλικτα χρώματα, αποχρώσεις κλπ επέκταση του color
+%% https://www.ctan.org/pkg/xcolor
+\RequirePackage{wrapfig} % Επιτρέπει σε κείμενο να περιτρυγυρίζει figures.
+% Παλιο.Εμφανίζει θέματα καποιες φορες. Δουλεύει οκ με minipages από ότι καταλαβαίνω
+%% https://www.ctan.org/pkg/wrapfig
+\RequirePackage{float} % Επεκταση δυνατοτήτων table/figure. Συνδιάζεται με wrapfig
+% Παλιο. Μπορει να μην λειτουργεί παντού πλήρως
+%% https://www.ctan.org/pkg/float
+\RequirePackage{subcaption} % Χώρισμα figure και τιτλοφόριση 
+%% https://www.ctan.org/pkg/subcaption
+
+% -------------------------------------------
+%%% Επέκταση δυνατοτήτων
+% -------------------------------------------
+\RequirePackage{listings} % Για κωδικά κυρίως άλλα και για ειδική μορφοποίησή τμημάτων κειμένου
+%% https://www.ctan.org/pkg/listings
+\RequirePackage{multirow} % Συνδιάζει πολλές γραμμές στο tabular
+%% https://www.ctan.org/pkg/multirow
+\RequirePackage{tcolorbox} % Κουτία με χρωματα κλπ  
+%% https://www.ctan.org/pkg/tcolorbox
+\RequirePackage[pdfencoding=auto, psdextra]{hyperref} % Clickable links/references
+% Στα [] είναι το encoding των γραμμάτων στα link και το θέτω για τα μαθηματικά και τα ελληνικα 
+% στους τίτλους των section κλπ. Στα ίδια τα section κλείσε τα math στην \texorpdfstring{$--ΤΥΠΟΣ--$}{} 
+%% https://www.ctan.org/pkg/hyperref
+\RequirePackage{soulutf8} % Για πιο ομορφη υπογραμμιση, strikethrough κ.α. 
+%% https://www.ctan.org/pkg/soulutf8
+%% https://cs.brown.edu/about/system/managed/latex/doc/soul.pdf
+\setuldepth{nounderchar}% Λέξη δείγμα για το βαθος υπογραμμισης
+
+% ===========================================
+%% Settings για τα πακέτα
+% ===========================================
+
+%% Χρώματα, επιλογές για γραφικά
+\definecolor{myOrange}{rgb}{255, 102, 0} % internal link color% http://latexcolor.com/
+\definecolor{backcolour}{rgb}{0.85,0.85,0.92} % used in listings
+\definecolor{DarkGreen}{rgb}{0.01,0.39,0.25} % used in listings
+\DeclareGraphicsExtensions{.png,.jpg,.pdf} 
+
+%% Listing, σχετικά απλό και όμορφο για R
+%  δεν πιανει τα πάντα αλλα για μικρά τμήματα είναι εντάξει
+\lstset{language=R,
+    backgroundcolor=\color{backcolour},
+    basicstyle=\small\ttfamily, %Font stuff change with \usepackage{} ?
+    stringstyle=\color{DarkGreen},
+    %otherkeywords={0,1,2,3,4,5,6,7,8,9},
+    morekeywords={TRUE,FALSE,survfit,Surv,cumhaz,AIC,'compute_AD'},
+    deletekeywords={data,frame,length,as,character,time,lower,upper,on,C,effects},
+    keywordstyle=\color{blue},
+    commentstyle=\color{DarkGreen},
+    escapechar = /%
+}
+
+%% tcolorbox , εμφάνιση των κουτιών
+%  Grey
+\tcbsetforeverylayer{
+    colback=gray!15!white,
+    colframe=black!50!white,
+    colbacktitle=lightgray,
+    fonttitle=\bfseries,
+    coltitle=black,
+    halign title=center
+}
+
+%% hyperref, χρώματα
+\hypersetup{
+    colorlinks=true,
+    citecolor=yellow,
+    filecolor=magenta,
+    linkcolor=myOrange,
+    urlcolor=blue,
+    linktocpage=true, % link οι σελίδες των περιεχομενων αντι για τους τιτλους
+    %linkbordercolor=red, % πλαίσιο γύρω από τα link
+}
+
+% ===========================================
+%% Εντολές/Συντομεύσεις
+% ===========================================
+\newcommand{\bigO}[1]{\mathcal{O}\left( #1\right)} % Big o notation
+\newcommand{\vNum}[1]{\lvert V\left( #1\right)\rvert} % πληθηκότητα κόμβων
+\newcommand{\eNum}[1]{\lvert E\left( #1\right)\rvert} % πληθηκότητα ακμών
+\newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
+\newcommand{\ceil}[1]{\left\lceil #1 \right\rceil}
+
+%% Additional interesting packages
+% -------------------------------------------
+% \RequirePackage{natbib} % Eυέλικτη βιβλιογραφία
+% https://www.ctan.org/pkg/natbib
