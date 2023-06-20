@@ -1,11 +1,11 @@
 \NeedsTeXFormat{LaTeX2e} % I used version [2022-02-02] but likely most reasonably modern versions will be fine
-\ProvidesPackage{simplehwgr}[2023/06/19 v1.0 packages for doing homework]
+\ProvidesPackage{simplehwgr}[2023/06/19 v0.1 Collection of packages for doing homework]
 % Comments will be in greek from here on.
 
 % -------------------------------------------
 %%% Γλώσσες 
 % -------------------------------------------
-\RequirePackage[english,main=greek]{babel} 
+\RequirePackage[english,main=greek]{babel}[2020/02/14] 
 %% https://www.ctan.org/pkg/babel
 \babeltags{en = english} 
 \babeltags{gr = greek}
@@ -19,65 +19,66 @@
 % -------------------------------------------
 %%% Τιτλος και πρωτη σελίδα
 % -------------------------------------------
-\RequirePackage{titling} % Ελεγχος της σελίδας τίτλου.
+\RequirePackage{titling}[2009/09/04] % Ελεγχος της σελίδας τίτλου.
 %% https://www.ctan.org/pkg/titling
 % Τιτλος στο "κέντρο" (150pt απο πάνω)
 \renewcommand\maketitlehooka{\null\vspace*{150pt}}
 \renewcommand\maketitlehookd{\vfill\null}
-\RequirePackage{authblk} % Κάποια settings για πολλαπλούς authors και καλύτερα author block
+\RequirePackage{authblk}[2001/02/27] % Κάποια settings για πολλαπλούς authors και καλύτερα author block
 %% https://www.ctan.org/pkg/authblk
 
 % -------------------------------------------
 %%% Διάφορα σύμβολα και πακέτα μαθηματικών
 % -------------------------------------------
-\RequirePackage{amsmath} % Βασικό πακέτο μαθηματικων
+\RequirePackage{amsmath}[2020/01/20] % Βασικό πακέτο μαθηματικων
 %% https://www.ctan.org/pkg/amsmath
-\RequirePackage{amssymb} % Συμβολα 
+\RequirePackage{amssymb}[2013/01/14] % Συμβολα 
 %% https://texdoc.org/serve/amssymb.pdf/0
 %% https://ctan.math.washington.edu/tex-archive/fonts/amsfonts/doc/amssymb.pdf
-\RequirePackage{amsthm} % Θεωρήματα,λημματα κλπ
+\RequirePackage{amsthm}[2017/10/31] % Δομή για θεωρήματα,λημματα κλπ
 %% https://www.ctan.org/pkg/amsthm 
 \RequirePackage{physics} % Ευέλικτα brackets, συντομότερες εντολές για κοινές συναρτησεις κα.
 %% https://www.ctan.org/pkg/physics
-\RequirePackage{nicefrac} % Πλάγια κλάσματα (vintage)
+\RequirePackage{nicefrac}[1998/08/04] % Πλάγια κλάσματα (vintage)
 %% https://www.ctan.org/pkg/nicefrac
-\RequirePackage{xfrac} % Πλάγια κλάσματα περισσότερες επιλογές
+\RequirePackage{xfrac}[2020-02-14] % Πλάγια κλάσματα περισσότερες επιλογές
 %% https://www.ctan.org/pkg/xfrac
-\RequirePackage{stackrel} % Επέκταση stackrel και κάτω απο relation. Προσθήκη stack σε binary σχεσεις
+\RequirePackage{stackrel}[2016/05/16] % Επέκταση stackrel και κάτω απο relation. Προσθήκη stack σε binary σχεσεις
 %% https://www.ctan.org/pkg/stackrel
-\RequirePackage[makeroom]{cancel} % Σβησίματα σε math. Το makeroom αφήνει κενό για την τιμη που ισούται αυτό που σβήνεις
+\RequirePackage[makeroom]{cancel}[2013/04/12] % Σβησίματα σε math.
+% Το makeroom αφήνει κενό για την τιμη που ισούται αυτό που σβήνεις
 %% https://www.ctan.org/pkg/cancel
 
 % -------------------------------------------
 %%% Γραφήματα και χρώματά
 % -------------------------------------------
-\RequirePackage{graphicx} % Επέκταση του graphics, λίγο διαφορετικό συντακτικο
+\RequirePackage{graphicx}[2019/11/30] % Επέκταση του graphics, λίγο διαφορετικό συντακτικο
 %% https://www.ctan.org/pkg/graphicx
-\RequirePackage{xcolor} % Ευέλικτα χρώματα, αποχρώσεις κλπ επέκταση του color
+\RequirePackage{xcolor}[2016/05/11] % Ευέλικτα χρώματα, αποχρώσεις κλπ επέκταση του color
 %% https://www.ctan.org/pkg/xcolor
-\RequirePackage{wrapfig} % Επιτρέπει σε κείμενο να περιτρυγυρίζει figures.
+\RequirePackage{wrapfig}[2003/01/31] % Επιτρέπει σε κείμενο να περιτρυγυρίζει figures.
 % Παλιο.Εμφανίζει θέματα καποιες φορες. Δουλεύει οκ με minipages από ότι καταλαβαίνω
 %% https://www.ctan.org/pkg/wrapfig
-\RequirePackage{float} % Επεκταση δυνατοτήτων table/figure. Συνδιάζεται με wrapfig
+\RequirePackage{float}[2001/11/08] % Επεκταση δυνατοτήτων table/figure. Συνδιάζεται με wrapfig
 % Παλιο. Μπορει να μην λειτουργεί παντού πλήρως
 %% https://www.ctan.org/pkg/float
-\RequirePackage{subcaption} % Χώρισμα figure και τιτλοφόριση 
+\RequirePackage{subcaption}[2020/01/22] % Χώρισμα figure και τιτλοφόριση 
 %% https://www.ctan.org/pkg/subcaption
 
 % -------------------------------------------
 %%% Επέκταση δυνατοτήτων
 % -------------------------------------------
-\RequirePackage{listings} % Για κωδικά κυρίως άλλα και για ειδική μορφοποίησή τμημάτων κειμένου
+\RequirePackage{listings}[2019/09/10] % Για κωδικά κυρίως άλλα και για ειδική μορφοποίησή τμημάτων κειμένου
 %% https://www.ctan.org/pkg/listings
-\RequirePackage{multirow} % Συνδιάζει πολλές γραμμές στο tabular
+\RequirePackage{multirow}[2019/05/31] % Συνδιάζει πολλές γραμμές στο tabular
 %% https://www.ctan.org/pkg/multirow
-\RequirePackage{tcolorbox} % Κουτία με χρωματα κλπ  
+\RequirePackage{tcolorbox}[2019/11/15] % Κουτία με χρωματα κλπ  
 %% https://www.ctan.org/pkg/tcolorbox
-\RequirePackage[pdfencoding=auto, psdextra]{hyperref} % Clickable links/references
+\RequirePackage[pdfencoding=auto, psdextra]{hyperref}[2020/01/14] % Clickable links/references
 % Στα [] είναι το encoding των γραμμάτων στα link και το θέτω για τα μαθηματικά και τα ελληνικα 
 % στους τίτλους των section κλπ. Στα ίδια τα section κλείσε τα math στην \texorpdfstring{$--ΤΥΠΟΣ--$}{} 
 %% https://www.ctan.org/pkg/hyperref
-\RequirePackage{soulutf8} % Για πιο ομορφη υπογραμμιση, strikethrough κ.α. 
+\RequirePackage{soulutf8}[2019/12/15] % Για πιο ομορφη υπογραμμιση, strikethrough κ.α. 
 %% https://www.ctan.org/pkg/soulutf8
 %% https://cs.brown.edu/about/system/managed/latex/doc/soul.pdf
 \setuldepth{nounderchar}% Λέξη δείγμα για το βαθος υπογραμμισης
