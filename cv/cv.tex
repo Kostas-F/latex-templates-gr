@@ -1,4 +1,5 @@
 \documentclass[a4paper,11pt,final]{moderncv}
+\listfiles
 \moderncvtheme[blue]{classic}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -8,24 +9,27 @@
 \babeltags{en = english}
 \babeltags{gr=greek}
 \usepackage{fontawesome} % Logos
-\usepackage{etoolbox}% http://ctan.org/pkg/etoolbox
+%% https://www.ctan.org/pkg/fontawesome
+\usepackage{etoolbox} % Programming toolbox. Used in renewing commands
+%% http://ctan.org/pkg/etoolbox
 
+%%%
 \makeatletter
-  
-%fix email with greek language
+% fix email with greek language
 \renewcommand*{\emaillink}[2][]{%
   \ifthenelse{\equal{#1}{}}%
     {\href{mailto:#2}{\textlatin{#2}}}%
     {\href{mailto:#2}{\textlatin{#1}}}}
-%fix links
+% fix links with greek language.
 \renewcommand*{\httplink}[2][]{%
    \ifthenelse{\equal{#1}{}}%
     {\href{https://www.#2}{\textlatin{#2}}}%
-    {\href{https://www.#2}{\textlatin{#1}}}}
-    
+    {\href{https://www.#2}{\textlatin{#1}}}}    
 \makeatother
+%%%%
 
-\photo[64pt]{photo.png}
+%%% Πληροφορίες
+\photo[64pt]{img/photo.png}
 \firstname{Όνομα}
 \familyname{Επώνυμο}
 \title{Βιογραφικό Σημείωμα}
@@ -36,7 +40,6 @@
 \extrainfo{%
 \textcolor{blue}\faGithub$\ $\textcolor{blue}{\httplink{github.com/[username]}}\\
 }
-
 
 \begin{document}
 \selectlanguage{greek}
