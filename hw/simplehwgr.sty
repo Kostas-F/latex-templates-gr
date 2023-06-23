@@ -82,6 +82,8 @@
 %% https://www.ctan.org/pkg/soulutf8
 %% https://cs.brown.edu/about/system/managed/latex/doc/soul.pdf
 \setuldepth{nounderchar}% Λέξη δείγμα για το βαθος υπογραμμισης
+\RequirePackage[symbol]{parnotes}[2019/07/23] % Ευέλικτες υποσημειώσεις (πχ μετά απο παραγραφους)
+%% https://www.ctan.org/pkg/parnotes
 
 % ===========================================
 %% Settings για τα πακέτα
@@ -132,11 +134,13 @@
 % ===========================================
 %% Εντολές/Συντομεύσεις
 % ===========================================
-\newcommand{\bigO}[1]{\mathcal{O}\left( #1\right)} % Big o notation
-\newcommand{\vNum}[1]{\lvert V\left( #1\right)\rvert} % πληθηκότητα κόμβων
-\newcommand{\eNum}[1]{\lvert E\left( #1\right)\rvert} % πληθηκότητα ακμών
-\newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
-\newcommand{\ceil}[1]{\left\lceil #1 \right\rceil}
+\newcommand{\bigO}[1]{\mathcal{O}\left( #1\right)}    % Big o notation
+\newcommand{\vNum}[1]{\ensuremath\lvert V\left( #1\right)\rvert} % πληθηκότητα κόμβων
+\newcommand{\eNum}[1]{\ensuremath\lvert E\left( #1\right)\rvert} % πληθηκότητα ακμών
+\newcommand{\floor}[1]{\ensuremath\left\lfloor #1 \right\rfloor} % συντομευση floor
+\newcommand{\ceil}[1]{\ensuremath\left\lceil #1 \right\rceil}	   % συντομευση ceiling
+\newcommand{\sol}{\noindent\rule{0.99\textwidth}{0.4pt}\newline\vspace{10pt}} % διαχωριστική γραμμη ερ/λύσης
+\newcommand{\prob}[1]{\mathbb{P}[#1]} % πιθανότητα
 
 %% Additional interesting packages
 % -------------------------------------------
