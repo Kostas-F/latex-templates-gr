@@ -2,7 +2,7 @@ WIP, not finalized templates and expected to add more as I use them. Presentatio
 
 # Simple LaTeX Templates
 
-Latex templates I use. Greek language is the primary and the main usefulness of the templates are for people new to LaTeX who want a dual language document and are having issues (with moderncv commands for example). The rest of the description will, for that reason be in Greek
+Latex templates I use. Greek language is the primary and the main usefulness of the templates are for people new to LaTeX who want a dual language document and are having issues (with moderncv commands for example). The rest of the description will, for that reason be in Greek.
 
 ## Ασκήσεις (hw)
 Ο φάκελος `hw` περιέχει ένα `.tex` αρχέιο και το παραγόμενο `.pdf` ως παραδείγματα των δυνατοτήτων της συλλογής πακέτων. Το μόνο που χρειάζεται είναι το `.sty` στον φάκελο του project και να συμπεριλφθεί ως package (δηλ. `\usepackage{simplehwgr}`). 
