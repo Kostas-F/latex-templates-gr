@@ -1,4 +1,4 @@
-WIP, not finalized (and most likely never will be) templates and expected to add more as I use them. Presentation template in the works.
+WIP, not finalized templates and expected to add more as I use them. Presentation template in the works.
 
 # Simple LaTeX Templates
 
